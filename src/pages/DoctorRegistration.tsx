@@ -50,19 +50,50 @@ const DoctorRegistration = () => {
     setShowPreview(true);
   };
 
-  const confirmSubmission = () => {
-    alert('Registration submitted successfully! Our verification team will contact you within 24-48 hours.');
-    setShowPreview(false);
-    // Reset form
-    setFormData({
-      fullName: '',
-      mobile: '',
-      email: '',
-      city: '',
-      specialization: '',
-      ndaAccepted: false
-    });
-    setFiles({ photo: null, aadhaar: null, degree: null });
+  const confirmSubmission = async () => {
+    try {
+      const form = new FormData();
+      form.append('fullName', formData.fullName);
+      form.append('mobile', formData.mobile);
+      form.append('email', formData.email);
+      form.append('city', formData.city);
+      form.append('specialization', formData.specialization);
+      form.append('ndaAccepted', String(formData.ndaAccepted));
+
+      if (!files.photo || !files.aadhaar || !files.degree) {
+        alert('Please upload all required documents.');
+        return;
+      }
+      form.append('photo', files.photo);
+      form.append('aadhaar', files.aadhaar);
+      form.append('degree', files.degree);
+
+      const response = await fetch('/doctor-handler.php', {
+        method: 'POST',
+        body: form
+      });
+      const data = await response.json().catch(() => ({}));
+
+      if (!response.ok || !data.success) {
+        const msg = (data && data.error) ? data.error : 'Submission failed';
+        alert(`Error: ${msg}`);
+        return;
+      }
+
+      alert('Registration submitted successfully! Our verification team will contact you within 24-48 hours.');
+      setShowPreview(false);
+      setFormData({
+        fullName: '',
+        mobile: '',
+        email: '',
+        city: '',
+        specialization: '',
+        ndaAccepted: false
+      });
+      setFiles({ photo: null, aadhaar: null, degree: null });
+    } catch (err: any) {
+      alert(`Unexpected error: ${err?.message || err}`);
+    }
   };
 
   if (showPreview) {

@@ -29,13 +29,13 @@ const Home = () => {
 
   const doctors = [
     {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Dr. Priya Sharma',
       specialization: 'Orthopedic Specialist',
       experience: '15+ years',
       image: 'https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=400'
     },
     {
-      name: 'Dr. Priya Sharma',
+      name: 'Dr. Rajesh Kumar',
       specialization: 'Neurological Physiotherapy',
       experience: '12+ years',
       image: 'https://images.pexels.com/photos/5452268/pexels-photo-5452268.jpeg?auto=compress&cs=tinysrgb&w=400'

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Stethoscope } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +22,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-amber-900 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-amber-900/30 transition-all duration-300">
-                <Stethoscope className="w-6 h-6 text-white" />
-              </div>
+              <img
+                src="/assets/flexi4ulogo.jpg"
+                alt="Flexi4U logo"
+                className="w-10 h-10 rounded-lg object-contain group-hover:shadow-lg group-hover:shadow-amber-900/30 transition-all duration-300"
+              />
               <span className="text-2xl font-bold text-amber-900 group-hover:text-amber-800 transition-colors duration-300">
                 Flexi4U
               </span>

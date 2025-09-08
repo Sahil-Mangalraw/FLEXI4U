@@ -13,19 +13,19 @@ const About = () => {
       name: 'Piyush Kumar',
       role: 'Founder',
       description: 'Blending healthcare with technology to create innovative solutions for better patient care.',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400'
+      image: '/assets/piyush.jpg'
     },
     {
       name: 'Khatik Laxminarayan',
       role: 'Co-founder',
       description: 'Passionate about patient care and ensuring every individual receives quality healthcare.',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400'
+      image: '/assets/laxminarayan.jpg'
     },
     {
       name: 'Gaurav Kumar',
       role: 'Co-founder',
       description: 'Connecting physiotherapy to daily health routines for sustainable wellness.',
-      image: 'https://images.pexels.com/photos/2182969/pexels-photo-2182969.jpeg?auto=compress&cs=tinysrgb&w=400'
+      image: '/assets/gaurav.jpg'
     }
   ];
 

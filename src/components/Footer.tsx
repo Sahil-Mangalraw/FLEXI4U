@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stethoscope, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,9 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                <Stethoscope className="w-6 h-6 text-amber-900" />
-              </div>
+              <img src="/assets/flexi4ulogo.jpg" alt="Flexi4U logo" className="w-10 h-10 rounded-lg object-contain bg-white" />
               <span className="text-2xl font-bold">Flexi4U</span>
             </div>
             <p className="text-amber-100 mb-4 max-w-md">
@@ -35,15 +33,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span className="text-amber-100">info@flexi4u.com</span>
+                <span className="text-amber-100"> piyushkumar54197@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span className="text-amber-100">+91 98765 43210</span>
+                <span className="text-amber-100">+91 9135033924</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span className="text-amber-100">Delhi, India</span>
+                <span className="text-amber-100">Jaipur, India</span>
               </div>
             </div>
           </div>
