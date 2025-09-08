@@ -10,42 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="/assets/logo.svg" />
-    <link rel="stylesheet" href="./assets/index-Bp281OWf.css">
-    <link rel="stylesheet" href="./assets/index-BV-bDSSI.css">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./assets/index-BIptp-U3.js"></script>
-    <script type="module" src="./assets/index-Y791ntD1.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        try {
-          // Swap header/footer icon to logo.png
-          document.querySelectorAll('nav .w-10.h-10, footer .w-10.h-10').forEach(function (el) {
-            // If it's already an IMG pointing to our logo, skip
-            if (el.tagName === 'IMG' && /\/assets\/image\/logo\.png$/.test(el.getAttribute('src') || '')) return;
-            var img = document.createElement('img');
-            img.src = '/assets/flexi4ulogo.jpg';
-            img.alt = 'Flexi4U logo';
-            img.className = 'w-10 h-10 rounded-lg object-contain';
-            el.replaceWith(img);
-          });
-
-          // Update About founders images by alt text
-          var founderMap = {
-            'Piyush Kumar': '/assets/piyush.jpg',
-            'Khatik Laxminarayan': '/assets/laxminarayan.jpg',
-            'Gaurav Kumar': '/assets/gaurav.jpg'
-          };
-          Object.keys(founderMap).forEach(function (name) {
-            document.querySelectorAll('img[alt="' + name + '"]').forEach(function (img) {
-              img.setAttribute('src', founderMap[name]);
-            });
-          });
-        } catch (e) {
-          console && console.warn && console.warn('runtime image swap skipped:', e);
-        }
-      });
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

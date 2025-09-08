@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Heart, Target, Users } from 'lucide-react';
 
+// Import images with error handling
+const piyushImg = new URL('/assets/piyush.jpg', import.meta.url).href;
+const laxmiImg = new URL('/assets/Laxminarayan.jpg', import.meta.url).href;
+const gauravImg = new URL('/assets/gaurav.jpg', import.meta.url).href;
+
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,19 +18,19 @@ const About = () => {
       name: 'Piyush Kumar',
       role: 'Founder',
       description: 'Blending healthcare with technology to create innovative solutions for better patient care.',
-      image: '/assets/piyush.jpg'
+      image: piyushImg
     },
     {
       name: 'Khatik Laxminarayan',
       role: 'Co-founder',
       description: 'Passionate about patient care and ensuring every individual receives quality healthcare.',
-      image: '/assets/laxminarayan.jpg'
+      image: laxmiImg
     },
     {
       name: 'Gaurav Kumar',
       role: 'Co-founder',
       description: 'Connecting physiotherapy to daily health routines for sustainable wellness.',
-      image: '/assets/gaurav.jpg'
+      image: gauravImg
     }
   ];
 
@@ -110,7 +115,7 @@ const About = () => {
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-amber-900/10 transition-all duration-300 hover:-translate-y-2 group"
               >
                 <img 
-                  src={founder.image}
+                  src={`${founder.image}?v=${Date.now()}`}
                   alt={founder.name}
                   className="w-32 h-32 rounded-full mx-auto mb-6 object-cover group-hover:shadow-lg group-hover:shadow-amber-900/20 transition-all duration-300"
                 />

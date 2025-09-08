@@ -208,7 +208,7 @@ const DoctorRegistration = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
-                  placeholder="+91 98765 43210"
+                  placeholder="+91 9135033924"
                 />
               </div>
 

@@ -29,7 +29,7 @@ const Contact = () => {
     }, 3000);
   };
 
-  const whatsappNumber = "+919876543210";
+  const whatsappNumber = "+919135033924";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20Flexi4U,%20I%20would%20like%20to%20know%20more%20about%20your%20services.`;
 
   return (
@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 9135033924</p>
                     <p className="text-sm text-gray-500">Available 24/7 for emergencies</p>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">info@flexi4u.com</p>
+                    <p className="text-gray-600">piyushkumar54197@gmail.com</p>
                     <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Address</h3>
-                    <p className="text-gray-600">Delhi, India</p>
+                    <p className="text-gray-600">Jaipur, India</p>
                     <p className="text-sm text-gray-500">Serving nationwide</p>
                   </div>
                 </div>
